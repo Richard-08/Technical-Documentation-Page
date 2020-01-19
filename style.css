@@ -1,0 +1,148 @@
+html {
+  color: #4d4e53;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  display: flex;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: rgb(233, 233, 233);
+  width: 25%;
+  height: 100%;
+  border-right: 3px solid rgb(167, 167, 167);
+  transition: all ease-in-out;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+header {
+  color: black;
+  margin: 10px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+#navbar ul {
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar li:hover {
+  background: white;
+  transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 0.3s;
+  font-size: 1.01em;
+}
+
+#navbar a {
+  color: #4d4e53;
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  background: white;
+  width: 75%;
+  height: 100vh;
+  margin-left: 25%;
+  padding: 20px;
+  transition: ease-in-out;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+section article {
+  margin: 20px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0 0 10px;
+}
+
+section header {
+  text-align: left;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#openToggle {
+  position: fixed;
+  width: 30px;
+  height: 25px;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: ease-in-out;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform-style: flat;
+}
+
+#openToggle:hover {
+  background: rgba(0, 0, 0, 0.5);
+  
+}
+
+.toggle {
+  background-color: white;
+  width: 20px;
+  height: 3px;
+  margin: 2px;
+  border-radius: 2px;
+}
+
+@media only screen and (max-width: 860px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
